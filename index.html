@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Render Site</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <h1>👋 Hello from Render!</h1>
+    <p>This site is deployed as a Node.js web service.</p>
+    <button id="ping">Ping the server</button>
+    <pre id="response"></pre>
+  </main>
+
+  <script>
+    document.getElementById('ping').addEventListener('click', async () => {
+      const res = await fetch('/api/hello');
+      const data = await res.json();
+      document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>

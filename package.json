@@ -1,0 +1,16 @@
+{
+  "name": "render-sample-site",
+  "version": "1.0.0",
+  "description": "A sample website to deploy on Render",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
